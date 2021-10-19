@@ -1,0 +1,24 @@
+server:
+  servlet:
+    context-path: /api/noteapp
+  port: 8080
+
+spring:
+  datasource.url: jdbc:postgresql://localhost:5432/noteappdb?useSSL=false&useUnicode=yes&characterEncoding=UTF-8&user=postgres&password=12345
+  jpa:
+    # Lines dedicated only to generating the script file, it is not applied to the DB. These are from JPA, not from Hibernate
+    properties.javax.persistence.schema-generation.create-source: metadata
+    properties.javax.persistence.schema-generation.scripts.action: create
+    properties.javax.persistence.schema-generation.scripts.create-target: create.sql
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        show_sql: true
+        format_sql: true
+        ddl-auto: createdrop
+    database: postgresql
+  flyway:
+    locations: classpath:db/migration/postgres
+security:
+  appClientId: noteapp-web-client
+  appClientSecret: 12345
