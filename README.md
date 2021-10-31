@@ -11,7 +11,7 @@ Requirements for building and running the application you need:
 Running the application locally:
 
 1.Run Postgres database as Docker container:
-Create and start container: docker run -e 'POSTGRES_PASSWORD=12345' -p 5432:5432 --name postgres -d postgres
+  - Create and start container: docker run -e 'POSTGRES_PASSWORD=12345' -p 5432:5432 --name postgres -d postgres
 
 2.Execute the main method in the com/busarova/noteapp/NoteappApplication class from your IDE.
 Alternatively you can go to location of pom.xml and run Spring Boot application: mvn spring-boot:run
