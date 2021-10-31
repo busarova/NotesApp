@@ -1,7 +1,7 @@
 # NotesApp
 springboot-sample-app
 
-Requirements for building and running the application you need:
+Requirements for building and running the application:
 
 - JDK 1.11
 - Maven 3
